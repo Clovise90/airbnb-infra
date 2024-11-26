@@ -46,7 +46,7 @@ pipeline {
         stage('Checkov scan') {
             steps {
                
-                sh 'sudo yum install python3-pip'           // Install the package python3-pip 
+                sh 'sudo yum install python3-pip -y'           // Install the package python3-pip 
                 sh 'sudo yum remove python3-requests'      // Remove the package python3-requests already with the AMI
                 sh 'sudo pip3 install requests'            // Use pip3 to install the package called requests  
                 sh 'sudo pip3 install checkov'             // Use pip3 to install the package called checkov   
